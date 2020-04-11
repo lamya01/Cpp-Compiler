@@ -387,7 +387,7 @@ void printTree(struct node* n){
 //driver code
 main()
  {
-     yyin=fopen("inp.c", "r");
+     yyin=fopen("inp.cpp", "r");
     yyout=fopen("out.txt","w");
   yyparse();
 	printf("\n");
