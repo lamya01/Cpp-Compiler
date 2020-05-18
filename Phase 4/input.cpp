@@ -5,10 +5,12 @@ void main()
 	
 	int a=10,b=5,c,d;
 	float j;
+	
     
 	if(a>b)
 	{
 		c=a+b; 
+		b=b+a;
 	}
 	else
 	{ 
