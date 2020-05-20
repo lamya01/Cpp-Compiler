@@ -1,0 +1,55 @@
+.text
+L2 :
+MOV R0,=t2
+MOV R1,[R0]
+MOV R2,#5
+CMP R1,R2
+BLT L1
+goto L3
+L1 :
+MOV R3,=t1
+MOV R4,[R3]
+MOV R5,#1
+MOV R6,=t1
+MOV R7,[R6]
+ADD R7,R4,R5
+STR R7, [R6]
+MOV R8,=i
+MOV R9,[R8]
+MOV R10,=t1
+MOV R11,[R10]
+STR R11, [R8]
+MOV R12,#4
+MOV R0,=i
+MOV R1,[R0]
+MOV R2,=t2
+MOV R3,[R2]
+MUL R3,R12,R1
+STR R3, [R2]
+goto L2
+L3 :
+MOV R4,=a
+MOV R5,[R4]
+MOV R6,=b
+MOV R7,[R6]
+MOV R8,=sum
+MOV R9,[R8]
+ADD R9,R5,R7
+STR R9, [R8]
+MOV R10,=a
+MOV R11,[R10]
+MOV R12,=b
+MOV R0,[R12]
+MOV R1,=prod
+MOV R2,[R1]
+MUL R2,R11,R0
+STR R2, [R1]
+SWI 0x011
+.DATA
+i: .WORD 0
+t1: .WORD 0
+t2: .WORD 0
+a: .WORD 5
+b: .WORD 6
+sum: .WORD 0
+prod: .WORD 0

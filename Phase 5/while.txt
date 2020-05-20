@@ -1,0 +1,18 @@
+i = 0
+t1 = 0
+t2 = 0
+a = 5
+b = 6
+sum = 0
+prod = 0
+L2 :
+if t2<5 goto L1
+goto L3
+L1 :
+t1 = t1 + 1
+i = t1
+t2 = 4 * i
+goto L2
+L3 :
+sum = a + b
+prod = a * b
