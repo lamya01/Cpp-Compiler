@@ -4,7 +4,9 @@ int main(){
 	int a=-34+33;
 	float c=-78.023;
 	int b=a+34/2;
+	int e =5;
 	if(1<2){
+			e=3;
 			printf("Yes");
 		}
 		while(0){
@@ -15,5 +17,5 @@ int main(){
 		for(int i=0;i<10;i++){
 			a=a+1;
 		}
-		
+	
 }
